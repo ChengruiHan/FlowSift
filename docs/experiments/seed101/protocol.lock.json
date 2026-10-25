@@ -1,0 +1,35 @@
+{
+  "protocol_version": "v3.0",
+  "methods": [
+    "full10",
+    "late5",
+    "uniform5"
+  ],
+  "seeds": [
+    101
+  ],
+  "source_hash": "c574041612ca139765d44bce3946ee77ce8a6d10774c2b419a505d0095b5203e",
+  "reference_hash": "b52193062ef2e865178160cf50121e3b6cbea73d6e73d21872e7bebd59786dbd",
+  "diagnostic_cache_hash": "ca534207a49df9ac22b857187249b050529f9cd4e6a5f1f89027ffe77260fe6b",
+  "correctness_report_hash": "5d9c3289e5481283f55b13ea52bb73caff942a6d02b9eb57365e08f234f25699",
+  "attempted_budget": 300,
+  "suggested_budget": 300,
+  "planned_target_updates": 200,
+  "resource_reason": null,
+  "pilot": "<PROJECT>/results/single_seed/runs/pilot_full10_seed17",
+  "test_opened": false,
+  "run_order": [
+    [
+      101,
+      "full10"
+    ],
+    [
+      101,
+      "late5"
+    ],
+    [
+      101,
+      "uniform5"
+    ]
+  ]
+}

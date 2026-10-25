@@ -1,0 +1,63 @@
+{
+  "details": [
+    {
+      "cache_id": 0,
+      "chunks": 16,
+      "current_seconds": 1.2015007476806643,
+      "learner_seconds": 4.18559654802084,
+      "loss_backward_seconds": 1.5483904953002932,
+      "method": "late5",
+      "optimizer_seconds": 0.009150560379028321,
+      "prefix_seconds": 0.40343033790588384,
+      "reference_seconds": 1.0000440979003904,
+      "transfer_seconds": 0.013696416020393372
+    }
+  ],
+  "rows": [
+    {
+      "allocated_peak": 2270820352,
+      "backend": "smolvla_cuda",
+      "cache_id": 0,
+      "chunk_count": 16,
+      "current_calls": 80,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 4188.3505173027515,
+      "method": "late5",
+      "reference_calls": 80,
+      "repeat": 0,
+      "reserved_peak": 2380267520,
+      "task_id": 1,
+      "trajectory_bytes": 2176000
+    },
+    {
+      "allocated_peak": 2272822272,
+      "backend": "smolvla_cuda",
+      "cache_id": 1,
+      "chunk_count": 15,
+      "current_calls": 75,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 3920.6997081637383,
+      "method": "late5",
+      "reference_calls": 75,
+      "repeat": 0,
+      "reserved_peak": 2380267520,
+      "task_id": 2,
+      "trajectory_bytes": 2040000
+    },
+    {
+      "allocated_peak": 2273042432,
+      "backend": "smolvla_cuda",
+      "cache_id": 2,
+      "chunk_count": 21,
+      "current_calls": 105,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 6256.276026368141,
+      "method": "late5",
+      "reference_calls": 105,
+      "repeat": 0,
+      "reserved_peak": 2380267520,
+      "task_id": 3,
+      "trajectory_bytes": 2856000
+    }
+  ]
+}

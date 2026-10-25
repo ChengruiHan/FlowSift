@@ -1,0 +1,12 @@
+{
+  "attempted_groups": 100,
+  "collapse_rate": 0.31,
+  "collapsed_groups": 31,
+  "completed_updates": 69,
+  "elapsed_seconds": 1990.6805551722646,
+  "env_steps": 78678,
+  "episodes": 400,
+  "final_checkpoint": "<PROJECT>/results/single_seed/runs/pilot_uniform5_seed17/checkpoints/final_000100_39c5a8a4",
+  "final_policy_hash": "c5b0f43969e5f618f1d36b7e53c79be4000a69c59c25130b1af32a3e3ccaaa8d",
+  "status": "complete"
+}

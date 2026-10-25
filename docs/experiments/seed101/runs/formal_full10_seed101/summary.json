@@ -1,0 +1,12 @@
+{
+  "attempted_groups": 300,
+  "collapse_rate": 0.30666666666666664,
+  "collapsed_groups": 92,
+  "completed_updates": 208,
+  "elapsed_seconds": 6355.74847586453,
+  "env_steps": 230105,
+  "episodes": 1200,
+  "final_checkpoint": "<PROJECT>/results/single_seed/runs/formal_full10_seed101/checkpoints/final_000300_07a7d985",
+  "final_policy_hash": "7791c3975e962c9977b86b8bf0ea7bf138e03758b00c382dd6a4097b71f6f94e",
+  "status": "complete"
+}

@@ -1,0 +1,28 @@
+{
+  "batch_size": 1,
+  "checkpoint": "<PROJECT>/results/single_seed/runs/formal_late5_seed101/checkpoints/final_000300_c35a9d8d/pretrained_model",
+  "checkpoint_hash": "802c76823da1b8f1969d7bfc2b4417a89ec08d8e7b1614b8cb38d9c12e29b7fe",
+  "command": [
+    "<PROJECT>/scripts/evaluate_libero.py",
+    "--checkpoint",
+    "<PROJECT>/results/single_seed/runs/formal_late5_seed101/checkpoints/final_000300_c35a9d8d/pretrained_model",
+    "--run-id",
+    "formal_late5_seed101",
+    "--split",
+    "test",
+    "--output",
+    "<PROJECT>/results/single_seed/evaluations/formal_late5_seed101",
+    "--protocol-lock",
+    "<PROJECT>/results/single_seed/protocol.lock.json",
+    "--matrix-runs",
+    "<PROJECT>/results/single_seed/runs"
+  ],
+  "episodes_per_task": 20,
+  "max_env_steps": 280,
+  "policy_rng": "seed+episode_index; reset each episode",
+  "run_id": "formal_late5_seed101",
+  "sampler": "ode",
+  "seed": 1000,
+  "split": "test",
+  "strict_held_out_claim": false
+}

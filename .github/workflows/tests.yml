@@ -1,0 +1,30 @@
+name: CPU checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install CPU test dependencies
+        run: |
+          python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[test]'
+      - name: Regression tests
+        run: python -m pytest -q
+      - name: Three-method integration smoke
+        run: python scripts/smoke_cpu.py --output results/ci-smoke
+      - name: Verify published evidence
+        run: python scripts/verify_published_results.py
+      - name: Syntax checks
+        run: |
+          python -m compileall -q src scripts
+          bash -n scripts/setup_server.sh

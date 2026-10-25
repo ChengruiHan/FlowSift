@@ -1,0 +1,28 @@
+{
+  "batch_size": 1,
+  "checkpoint": "<PROJECT>/results/single_seed/runs/formal_uniform5_seed101/checkpoints/final_000300_a5ba124a/pretrained_model",
+  "checkpoint_hash": "0635399ee92e785de83adfda236865c488db0b304be185c2f1af9d79065ea51b",
+  "command": [
+    "<PROJECT>/scripts/evaluate_libero.py",
+    "--checkpoint",
+    "<PROJECT>/results/single_seed/runs/formal_uniform5_seed101/checkpoints/final_000300_a5ba124a/pretrained_model",
+    "--run-id",
+    "formal_uniform5_seed101",
+    "--split",
+    "test",
+    "--output",
+    "<PROJECT>/results/single_seed/evaluations/formal_uniform5_seed101",
+    "--protocol-lock",
+    "<PROJECT>/results/single_seed/protocol.lock.json",
+    "--matrix-runs",
+    "<PROJECT>/results/single_seed/runs"
+  ],
+  "episodes_per_task": 20,
+  "max_env_steps": 280,
+  "policy_rng": "seed+episode_index; reset each episode",
+  "run_id": "formal_uniform5_seed101",
+  "sampler": "ode",
+  "seed": 1000,
+  "split": "test",
+  "strict_held_out_claim": false
+}

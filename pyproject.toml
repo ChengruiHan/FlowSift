@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowsift"
+version = "0.3.0"
+description = "Selective transition rescoring for SmolVLA GRPO on LIBERO Object"
+authors = [{ name = "ChengruiHan" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "torch>=2.7",
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+]
+
+# lerobot / hf-libero / mujoco / robosuite are NOT declared here on purpose: they need the
+# CUDA-specific torch wheel installed first and a pinned lerobot checkout. See docs/server_training.md. Everything under tests/ runs without them.
+[project.urls]
+Repository = "https://github.com/ChengruiHan/FlowSift"
+Issues = "https://github.com/ChengruiHan/FlowSift/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "gymnasium>=1.0", "matplotlib>=3.8"]
+server = ["huggingface-hub>=0.30", "matplotlib>=3.8"]
+figures = ["matplotlib>=3.8"]
+rollout = ["gymnasium>=1.0", "imageio>=2.34"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src", "."]   # "." so tests can import toy/
+
+[tool.setuptools.packages.find]
+where = ["src"]

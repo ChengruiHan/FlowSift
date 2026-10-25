@@ -1,0 +1,242 @@
+[
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 1.0,
+    "draw": 0,
+    "grad_norm": 124.50639078123821,
+    "method": "full10"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9472429841890688,
+    "draw": 0,
+    "grad_norm": 231.52548211425653,
+    "method": "late5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9049033217363739,
+    "draw": 0,
+    "grad_norm": 188.60917187333476,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.7415960302920473,
+    "draw": 1,
+    "grad_norm": 157.66714568196986,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.4536132999528243,
+    "draw": 2,
+    "grad_norm": 105.70497223225863,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.6465152220509811,
+    "draw": 3,
+    "grad_norm": 116.23110427535164,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.89916279450762,
+    "draw": 4,
+    "grad_norm": 198.16308284932498,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.6832416478032483,
+    "draw": 5,
+    "grad_norm": 119.45123458212517,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9118935550675539,
+    "draw": 6,
+    "grad_norm": 204.072529366281,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 0,
+    "chunk_index": 0,
+    "cosine_with_full": 0.7764399741703266,
+    "draw": 7,
+    "grad_norm": 170.1493747116248,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 1.0,
+    "draw": 0,
+    "grad_norm": 121.33799833826968,
+    "method": "full10"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9334803687173925,
+    "draw": 0,
+    "grad_norm": 211.68944278051507,
+    "method": "late5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.727144222269061,
+    "draw": 0,
+    "grad_norm": 155.54375369579043,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8944489521052069,
+    "draw": 1,
+    "grad_norm": 202.55470422478285,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8252275147230561,
+    "draw": 2,
+    "grad_norm": 176.97320706758873,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8601808605294405,
+    "draw": 3,
+    "grad_norm": 169.36770849960857,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8358835528685467,
+    "draw": 4,
+    "grad_norm": 162.32697948390035,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.85408965487888,
+    "draw": 5,
+    "grad_norm": 195.53866279482298,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.41306497615643384,
+    "draw": 6,
+    "grad_norm": 110.02386167508455,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 1,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8653439674767609,
+    "draw": 7,
+    "grad_norm": 193.92644040851093,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 1.0,
+    "draw": 0,
+    "grad_norm": 115.8584966541527,
+    "method": "full10"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9443824604398658,
+    "draw": 0,
+    "grad_norm": 227.69477936544558,
+    "method": "late5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8472692886155506,
+    "draw": 0,
+    "grad_norm": 172.52964698617035,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.9240278926815816,
+    "draw": 1,
+    "grad_norm": 208.87324329695795,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8753855582068576,
+    "draw": 2,
+    "grad_norm": 177.52773576741023,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.8948640106436628,
+    "draw": 3,
+    "grad_norm": 204.99294244821695,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.907549484619737,
+    "draw": 4,
+    "grad_norm": 175.77571417725835,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.6032179085008593,
+    "draw": 5,
+    "grad_norm": 101.62910432037727,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.6771127907883491,
+    "draw": 6,
+    "grad_norm": 117.10531554855889,
+    "method": "uniform5"
+  },
+  {
+    "cache_id": 2,
+    "chunk_index": 0,
+    "cosine_with_full": 0.907549484619737,
+    "draw": 7,
+    "grad_norm": 175.77571417725835,
+    "method": "uniform5"
+  }
+]

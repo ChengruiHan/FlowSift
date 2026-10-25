@@ -1,0 +1,24 @@
+{
+  "batch_size": 1,
+  "checkpoint": "<PROJECT>/results/single_seed/runs/pilot_uniform5_seed17/checkpoints/final_000100_39c5a8a4/pretrained_model",
+  "checkpoint_hash": "c5b0f43969e5f618f1d36b7e53c79be4000a69c59c25130b1af32a3e3ccaaa8d",
+  "command": [
+    "<PROJECT>/scripts/evaluate_libero.py",
+    "--checkpoint",
+    "<PROJECT>/results/single_seed/runs/pilot_uniform5_seed17/checkpoints/final_000100_39c5a8a4/pretrained_model",
+    "--run-id",
+    "pilot_uniform5_seed17",
+    "--split",
+    "dev",
+    "--output",
+    "<PROJECT>/results/single_seed/evaluations/dev_pilot_uniform5_seed17"
+  ],
+  "episodes_per_task": 10,
+  "max_env_steps": 280,
+  "policy_rng": "seed+episode_index; reset each episode",
+  "run_id": "pilot_uniform5_seed17",
+  "sampler": "ode",
+  "seed": 2000,
+  "split": "dev",
+  "strict_held_out_claim": false
+}

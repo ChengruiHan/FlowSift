@@ -1,0 +1,76 @@
+project: FlowSift
+protocol_version: v3.0
+upstream:
+  repo: https://github.com/BlackMirean/FlowVLA-RL
+  commit: 50e73afc07212f48bed370ea4c88a3131d6f914a
+model:
+  repo: MorpheusTzz/smolvla-grpo-libero-object
+  revision: a120aa9b51f8e55db5ad8284e051963c61a2f5ed
+  subdirectory: sft-100pct-baseline
+  reference_source: immutable_initial_sft
+  denoising_steps: 10
+  chunk_size: 50
+  n_action_steps: 50
+  freeze_state_projection: true
+run:
+  stage: pilot
+  seed: 17
+  attempted_budget: 100
+train:
+  suite: libero_object
+  task_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  group_size: 4
+  groups_per_update: 1
+  eta: 0.4
+  learning_rate: 1.0e-06
+  optimizer: AdamW
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 1.0e-10
+  clip_epsilon: 0.2
+  kl_beta: 0.01
+  epochs: 1
+  max_grad_norm: 1.0
+  chunk_discount: 1.0
+  advantage_std_normalization: false
+  learner_chunk_batch_size: 1
+  budget_unit: attempted_groups
+  collapsed_group_early_stop: false
+selection:
+  method: late5
+  uniform_count: 5
+  sample_per: chunk
+  without_replacement: true
+  independent_keyed_rng: true
+  retain_original_time_grid: true
+  normalize_by_selected_count: true
+evaluation:
+  sampler: ode
+  denoising_steps: 10
+  max_env_steps: 280
+  batch_size: 1
+  dev_seed: 2000
+  dev_episodes_per_task: 10
+  test_seed: 1000
+  test_episodes_per_task: 20
+  checkpoint: final
+  strict_held_out_claim: false
+diagnostics:
+  every_attempted_groups: 50
+  fixed_chunks: 8
+  score_all_10_steps: true
+checkpoint:
+  every_attempted_groups: 50
+  always_save_final: true

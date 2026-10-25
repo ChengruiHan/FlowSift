@@ -1,0 +1,28 @@
+{
+  "batch_size": 1,
+  "checkpoint": "<PROJECT>/models/smolvla-source/sft-100pct-baseline",
+  "checkpoint_hash": "ecded23f1472f887df06cd27ba2a32d6f8422be616191fc81509a007c7654818",
+  "command": [
+    "<PROJECT>/scripts/evaluate_libero.py",
+    "--checkpoint",
+    "<PROJECT>/models/smolvla-source/sft-100pct-baseline",
+    "--run-id",
+    "sft",
+    "--split",
+    "test",
+    "--output",
+    "<PROJECT>/results/single_seed/evaluations/sft",
+    "--protocol-lock",
+    "<PROJECT>/results/single_seed/protocol.lock.json",
+    "--matrix-runs",
+    "<PROJECT>/results/single_seed/runs"
+  ],
+  "episodes_per_task": 20,
+  "max_env_steps": 280,
+  "policy_rng": "seed+episode_index; reset each episode",
+  "run_id": "sft",
+  "sampler": "ode",
+  "seed": 1000,
+  "split": "test",
+  "strict_held_out_claim": false
+}

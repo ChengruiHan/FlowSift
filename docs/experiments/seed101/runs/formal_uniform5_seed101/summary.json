@@ -1,0 +1,12 @@
+{
+  "attempted_groups": 300,
+  "collapse_rate": 0.3233333333333333,
+  "collapsed_groups": 97,
+  "completed_updates": 203,
+  "elapsed_seconds": 5325.787649411708,
+  "env_steps": 227447,
+  "episodes": 1200,
+  "final_checkpoint": "<PROJECT>/results/single_seed/runs/formal_uniform5_seed101/checkpoints/final_000300_a5ba124a",
+  "final_policy_hash": "0635399ee92e785de83adfda236865c488db0b304be185c2f1af9d79065ea51b",
+  "status": "complete"
+}

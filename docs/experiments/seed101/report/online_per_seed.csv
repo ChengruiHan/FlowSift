@@ -1,0 +1,8 @@
+run_id,method,seed,attempted,episodes,updates,status,ode_success_rate,delta_sft_pp,delta_full_pp,stage,budget,env_steps
+sft,sft,,0,0,0,complete,0.6,0,,,,
+formal_full10_seed101,full10,101,300,1200,208,complete,0.635,3.500000000000003,0.0,formal,300,230105
+formal_late5_seed101,late5,101,300,1200,201,complete,0.665,6.500000000000005,3.0000000000000027,formal,300,226693
+formal_uniform5_seed101,uniform5,101,300,1200,203,complete,0.6900000000000001,9.000000000000007,5.500000000000005,formal,300,227447
+pilot_full10_seed17,full10,17,100,400,72,complete,,,,pilot,100,77736
+pilot_late5_seed17,late5,17,100,400,66,complete,,,,pilot,100,78595
+pilot_uniform5_seed17,uniform5,17,100,400,69,complete,,,,pilot,100,78678

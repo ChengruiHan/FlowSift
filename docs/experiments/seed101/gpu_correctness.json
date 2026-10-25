@@ -1,0 +1,1467 @@
+{
+  "actual_gradient_names": [
+    "model.vlm_with_expert.lm_expert.layers.0.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.0.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.1.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.2.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.3.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.4.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.5.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.6.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.7.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.8.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.9.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.10.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.11.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.12.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.13.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.14.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.self_attn.q_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.self_attn.k_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.self_attn.v_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.self_attn.o_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.mlp.gate_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.mlp.up_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.mlp.down_proj.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.input_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.layers.15.post_attention_layernorm.weight",
+    "model.vlm_with_expert.lm_expert.norm.weight",
+    "model.action_in_proj.weight",
+    "model.action_in_proj.bias",
+    "model.action_out_proj.weight",
+    "model.action_out_proj.bias",
+    "model.action_time_mlp_in.weight",
+    "model.action_time_mlp_in.bias",
+    "model.action_time_mlp_out.weight",
+    "model.action_time_mlp_out.bias"
+  ],
+  "atol": 1e-06,
+  "backend": "smolvla_cuda",
+  "checks": [
+    {
+      "check": "full_vs_upstream",
+      "chunk": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 0,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.603106137618944e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 1,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 1,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "late5",
+      "chunk": 1,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 1,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 2,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 2,
+      "max_abs_error": 1.52587890625e-05,
+      "relative_l2_error": 1.7052662783525245e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 2,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 2,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 3,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 3,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 2.512973729473151e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 3,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 3,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 4,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 4,
+      "max_abs_error": 6.103515625e-05,
+      "relative_l2_error": 6.741795139152173e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 4,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 4,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 5,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 5,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "late5",
+      "chunk": 5,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 5,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 6,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 6,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 2.4847192252367166e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 6,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 6,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 7,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 7,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.5442811312565935e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 7,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 7,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 8,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 8,
+      "max_abs_error": 1.52587890625e-05,
+      "relative_l2_error": 3.694096283075223e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 8,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 8,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 9,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 9,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 2.5364881428817974e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 9,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 9,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 10,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 10,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.058411178731467e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 10,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 10,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 11,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 11,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.539571434560055e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 11,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 11,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 12,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 12,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "late5",
+      "chunk": 12,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 12,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 13,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 13,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.773581488077143e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 13,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 13,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 14,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 14,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 3.511541239903015e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 14,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 14,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_vs_upstream",
+      "chunk": 15,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "old_vs_current",
+      "chunk": 15,
+      "max_abs_error": 3.0517578125e-05,
+      "relative_l2_error": 2.652700305665351e-08
+    },
+    {
+      "check": "late5",
+      "chunk": 15,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "uniform5",
+      "chunk": 15,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.0.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.1.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.2.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.3.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.4.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.5.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.6.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.7.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.8.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.9.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.10.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.11.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.12.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.13.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.14.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.self_attn.q_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.self_attn.k_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.self_attn.v_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.self_attn.o_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.mlp.gate_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.mlp.up_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.mlp.down_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.input_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.layers.15.post_attention_layernorm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.vlm_with_expert.lm_expert.norm.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_in_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_in_proj.bias",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_out_proj.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_out_proj.bias",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_time_mlp_in.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_time_mlp_in.bias",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_time_mlp_out.weight",
+      "relative_l2_error": 0.0
+    },
+    {
+      "check": "full_update",
+      "max_abs_error": 0.0,
+      "parameter": "model.action_time_mlp_out.bias",
+      "relative_l2_error": 0.0
+    }
+  ],
+  "reference_hash": "b52193062ef2e865178160cf50121e3b6cbea73d6e73d21872e7bebd59786dbd",
+  "rtol": 1e-05,
+  "source_hash": "c574041612ca139765d44bce3946ee77ce8a6d10774c2b419a505d0095b5203e",
+  "status": "passed"
+}

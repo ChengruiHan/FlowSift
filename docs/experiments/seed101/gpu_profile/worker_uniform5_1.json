@@ -1,0 +1,50 @@
+{
+  "details": [],
+  "rows": [
+    {
+      "allocated_peak": 2270820352,
+      "backend": "smolvla_cuda",
+      "cache_id": 0,
+      "chunk_count": 16,
+      "current_calls": 80,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 5096.135273575783,
+      "method": "uniform5",
+      "reference_calls": 80,
+      "repeat": 1,
+      "reserved_peak": 2380267520,
+      "task_id": 1,
+      "trajectory_bytes": 2176000
+    },
+    {
+      "allocated_peak": 2272822272,
+      "backend": "smolvla_cuda",
+      "cache_id": 1,
+      "chunk_count": 15,
+      "current_calls": 75,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 3939.1780234873295,
+      "method": "uniform5",
+      "reference_calls": 75,
+      "repeat": 1,
+      "reserved_peak": 2380267520,
+      "task_id": 2,
+      "trajectory_bytes": 2040000
+    },
+    {
+      "allocated_peak": 2273042432,
+      "backend": "smolvla_cuda",
+      "cache_id": 2,
+      "chunk_count": 21,
+      "current_calls": 105,
+      "initialization_allocated_peak": 2273041408,
+      "learner_ms": 5508.732348680496,
+      "method": "uniform5",
+      "reference_calls": 105,
+      "repeat": 1,
+      "reserved_peak": 2380267520,
+      "task_id": 3,
+      "trajectory_bytes": 2856000
+    }
+  ]
+}

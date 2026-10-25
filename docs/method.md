@@ -16,17 +16,43 @@ Selection happens **before** the current/reference denoiser forward passes. Comp
 
 A group contains G=4 episodes from the same initial scene. Episode i receives binary success reward R_i, with centered advantage:
 
-$$A_i=R_i-\frac{1}{G}\sum_{j=1}^{G}R_j.$$
+$$
+A_i=R_i-\frac{1}{G}\sum_{j=1}^{G}R_j.
+$$
 
 There is no standard-deviation normalization. For each chunk c, select a transition set S. For each k in S, sum Gaussian transition log-probabilities over **executed action positions and real action dimensions**. Padding dimensions and unexecuted positions are excluded. Current, old and reference probabilities use identical states, indices and masks.
 
-$$r_{ick}=\exp(\operatorname{clamp}(\ell^\theta_{ick}-\ell^{old}_{ick},-20,20)),\qquad d_{ick}=\ell^{ref}_{ick}-\ell^\theta_{ick}.$$
+The log-ratio is bounded for numerical stability. The probability ratio is then clipped separately for the PPO surrogate:
 
-$$L_{ick}=-\min\left(r_{ick}A_i,\operatorname{clip}(r_{ick},0.8,1.2)A_i\right)+0.01\left(e^{d_{ick}}-d_{ick}-1\right).$$
+$$
+\delta_{ick}=\ell^\theta_{ick}-\ell^{\mathrm{old}}_{ick}
+$$
+
+$$
+r_{ick}=\exp\left(\min\left(20,\max(-20,\delta_{ick})\right)\right)
+$$
+
+$$
+\bar r_{ick}=\min\left(1.2,\max(0.8,r_{ick})\right)
+$$
+
+The frozen-reference score defines the k3 regularizer:
+
+$$
+d_{ick}=\ell^{\mathrm{ref}}_{ick}-\ell^\theta_{ick},\qquad D_{ick}=e^{d_{ick}}-d_{ick}-1
+$$
+
+The combined transition loss is:
+
+$$
+L_{ick}=-\min\left(r_{ick}A_i,\bar r_{ick}A_i\right)+0.01D_{ick}
+$$
 
 If episode i contains C_i chunks, the complete group objective is:
 
-$$L=\frac{1}{G}\sum_i\frac{1}{C_i}\sum_c\frac{1}{|S_{ic}|}\sum_{k\in S_{ic}}L_{ick}.$$
+$$
+L=\frac{1}{G}\sum_i\frac{1}{C_i}\sum_c\frac{1}{|S_{ic}|}\sum_{k\in S_{ic}}L_{ick}.
+$$
 
 Both the policy-gradient and k3 terms are averaged over the selected count: five for Late/Uniform and ten for Full. The learner accumulates these weighted chunk gradients, clips their total norm to 1, and performs **one AdamW step per mixed group**. Each group uses one epoch.
 

@@ -32,11 +32,15 @@ All timesteps share parameters. Updating selected losses can change the entire d
 
 Fewer calls do not imply a proportional total speedup. A useful approximation is:
 
-$$T_{learner}(m)\approx T_{fixed}+mT_{selected}.$$
+$$
+T_{learner}(m)\approx T_{fixed}+mT_{selected}.
+$$
 
 Fixed work includes transfer, prefix handling and optimizer overhead. Online training also includes simulation, full SDE rollout, diagnostics, evaluation and storage. For a fixed workload with learner fraction f and learner speedup s, the ideal total speedup is:
 
-$$\frac{1}{(1-f)+f/s}.$$
+$$
+\frac{1}{(1-f)+f/s}.
+$$
 
 Online policies also change episode length and mixed-group frequency. Measure loop time separately rather than inferring it from call counts.
 
@@ -68,21 +72,31 @@ Retain initial SFT provenance, final checkpoints, the latest recoverable checkpo
 
 Generation runs from noise time τ=1 to action time τ=0. With K=10 and h=0.1:
 
-$$\tau_k=1-kh,\qquad k=0,\ldots,9.$$
+$$
+\tau_k=1-kh,\qquad k=0,\ldots,9.
+$$
 
 For stored state z_k and conditioning c, the expert predicts velocity v_θ. The inherited transition is:
 
-$$s_\theta=-\frac{z_k+(1-\tau_k)v_\theta}{\tau_k},\qquad g_k=\eta\sqrt{\tau_k},$$
+$$
+s_\theta=-\frac{z_k+(1-\tau_k)v_\theta}{\tau_k},\qquad g_k=\eta\sqrt{\tau_k},
+$$
 
-$$q_\theta(z_{k+1}\mid z_k,c)=\mathcal N(\mu_{\theta,k},\sigma_k^2I),$$
+$$
+q_\theta(z_{k+1}\mid z_k,c)=\mathcal{N}(\mu_{\theta,k},\sigma_k^2I),
+$$
 
-$$\mu_{\theta,k}=z_k-h\left(v_\theta-\tfrac12g_k^2s_\theta\right),\qquad \sigma_k^2=g_k^2h.$$
+$$
+\mu_{\theta,k}=z_k-h\left(v_\theta-\frac{1}{2}g_k^2s_\theta\right),\qquad \sigma_k^2=g_k^2h.
+$$
 
 Both endpoints come from the detached old-policy cache. Recompute only the current velocity contribution. Keep the original time grid and η; do not regenerate paths or renumber the last five transitions as a five-step integration grid. Finite discretization, model error and RL updates do not guarantee equal SDE/ODE task performance; measure final ODE performance directly.
 
 ### 4.2 Masked transition log-probability
 
-$$\ell_{i,c,k}(\theta)=\sum_{j,d}M_{i,c,j,d}\log q_\theta(z_{k+1,j,d}\mid z_k,c).$$
+$$
+\ell_{i,c,k}(\theta)=\sum_{j,d}M_{i,c,j,d}\log q_\theta(z_{k+1,j,d}\mid z_k,c).
+$$
 
 The mask removes padded dimensions and action positions not executed because of success, termination or the horizon cap. Old/current/reference use the same mask, state pair and index. This inherited masked surrogate is not the exact marginal likelihood of the final action chunk; no claim of an unbiased environment-return gradient is made.
 
@@ -90,23 +104,37 @@ The mask removes padded dimensions and action positions not executed because of 
 
 For four episodes sharing a task and initial scene, with R_i in {0,1}:
 
-$$A_i=R_i-\frac1G\sum_r R_r.$$
+$$
+A_i=R_i-\frac1G\sum_r R_r.
+$$
 
 Each chunk in an episode receives the same advantage (`chunk_discount=1`). The implemented ratio and combined loss are:
 
-$$\rho=\exp(\operatorname{clamp}(\ell_\theta-\ell_{old},-20,20)),$$
+$$
+\delta=\ell_\theta-\ell_{\mathrm{old}},\qquad \rho=\exp\left(\min\left(20,\max(-20,\delta)\right)\right)
+$$
 
-$$P=-\min\left(\rho A,\operatorname{clip}(\rho,1-\epsilon,1+\epsilon)A\right),$$
+$$
+\bar\rho=\min\left(1+\epsilon,\max(1-\epsilon,\rho)\right)
+$$
 
-$$d=\ell_{ref}-\ell_\theta,\qquad D=e^d-d-1,\qquad F=P+\beta D,$$
+$$
+P=-\min\left(\rho A,\bar\rho A\right)
+$$
 
-with ε=0.2 and β=0.01. Record raw log-ratio differences as well as clamp hits. A nonfinite k3 exponential is a numerical failure; do not introduce method-specific clamps to keep only one method running.
+$$
+d=\ell_{\mathrm{ref}}-\ell_\theta,\qquad D=e^d-d-1,\qquad F=P+\beta D
+$$
+
+Here ε=0.2 and β=0.01. The inner min/max bounds the log-ratio for numerical stability; the separate clipped ratio is used only by the PPO surrogate. Record raw log-ratio differences as well as clamp hits. A nonfinite k3 exponential is a numerical failure; do not introduce method-specific clamps to keep only one method running.
 
 ### 4.4 Episode/chunk/step weighting
 
 For N episodes, C_i chunks in episode i, and selected set S_ic:
 
-$$L=\frac1N\sum_{i=1}^{N}\frac1{C_i}\sum_{c=1}^{C_i}\frac1{|S_{ic}|}\sum_{k\in S_{ic}}F_{i,c,k}.$$
+$$
+L=\frac1N\sum_{i=1}^{N}\frac1{C_i}\sum_{c=1}^{C_i}\frac1{|S_{ic}|}\sum_{k\in S_{ic}}F_{i,c,k}.
+$$
 
 | Method | S | Original times | Current / reference calls per chunk |
 |---|---|---|---:|
@@ -170,7 +198,9 @@ Stage-A rollout costs are separate from all formal method budgets. Formal runs r
 
 Before formal test evaluation, estimate the Full pilot's mixed-group fraction p̂ = mixed/100 and select:
 
-$$B=\min\left(600,\max\left(300,100\left\lceil\frac{200}{100\max(\hat p,0.1)}\right\rceil\right)\right).$$
+$$
+B=\min\left(600,\max\left(300,100\left\lceil\frac{200}{100\max(\hat p,0.1)}\right\rceil\right)\right).
+$$
 
 Examples: p̂=0.8 gives 300; 0.6 gives 400; 0.4 gives 500; 0.2 reaches the 600 cap. The target of roughly 200 updates is a planning target, not a guarantee. Every method still stops at the same B. A Full pilot with zero mixed groups requires an audit before formal expansion.
 

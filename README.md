@@ -51,14 +51,18 @@ The intervention is the set of stored transitions used by the learner. Both the 
 | **Uniform-5** | Five uniformly sampled indices, without replacement, independently per chunk | 5 / 5 |
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Shared SFT initialization] --> B[Full 10-step SDE rollout]
     B --> C[Cache 11 states and old log-probabilities]
-    C --> D[Select 10 or 5 original transitions]
+    C --> J{Mixed rewards in the group?}
+    J -->|Yes| D[Select 10 or 5 original transitions]
+    J -->|No: skip learning| H
     D --> E[Rescore current and frozen reference]
-    E --> F[Average selected losses and update shared parameters]
-    F --> B
-    F --> G[Final checkpoint: 10-step ODE evaluation]
+    E --> F[Average selected losses]
+    F --> G[Update shared parameters once per mixed group]
+    G --> H{Group budget reached?}
+    H -->|No| B
+    H -->|Yes| I[Final checkpoint: 10-step ODE evaluation]
 ```
 
 | Controlled setting | Value |

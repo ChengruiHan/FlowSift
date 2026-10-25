@@ -1,27 +1,38 @@
-# 来源与修改边界
+# Attribution and modification boundaries
 
-本项目依据 `FlowSift-final-plan.md`（最终方案 v3.0）实现。
+FlowSift implements the selective-rescoring study described in the [v3 protocol](FlowSift-final-plan.md).
 
-- 底座：[BlackMirean/FlowVLA-RL](https://github.com/BlackMirean/FlowVLA-RL/tree/50e73afc07212f48bed370ea4c88a3131d6f914a)，commit `50e73afc07212f48bed370ea4c88a3131d6f914a`。
-- 继承上游 MIT LICENSE、SDE 核、GRPO 公式、SmolVLA prefix、LIBERO 场景恢复、toy 示例及回归测试。上游作者和版权声明保留。
-- `tests/upstream/smolvla_sde.py`、`tests/upstream/training.py` 为锁定版本的未修改快照，仅供回归测试。
-- 修改 `smolvla_sde.py`：在模型前向前选择原始转移索引；完整 rollout 不变。
-- 修改 `training.py`：同一索引同步用于 current/reference/old；独立 RNG、每步数值守卫、计时及梯度范围记录。
-- 修改 `libero_rollout.py`：显式冻结 state_proj、稳定 chunk ID、采样模式对齐及中途失败资源计数。
-- 修改 `reference.py`：deepcopy 时共享 VLM，避免短暂复制整套 VLM 的显存峰值。
-- 新增预算循环、原子 checkpoint、协议校验、服务器入口、profile、诊断和报告工具。
-- SDE、GRPO 和均匀时间步子采样思想均不作为本项目原创方法。
+## Implementation base
 
-模型仅使用 `MorpheusTzz/smolvla-grpo-libero-object` 的
-`a120aa9b51f8e55db5ad8284e051963c61a2f5ed/sft-100pct-baseline`；权重不随源码发布。
+The direct base is [BlackMirean/FlowVLA-RL](https://github.com/BlackMirean/FlowVLA-RL/tree/50e73afc07212f48bed370ea4c88a3131d6f914a), commit `50e73afc07212f48bed370ea4c88a3131d6f914a`.
 
-上游的环境记录及历史实测仅作为安装参考，见 `docs/upstream-environment.md`、
-`docs/upstream-setup.md`；其中性能数字不属于 FlowSift 实测结果。
+Inherited components include the MIT license, SDE core, GRPO formulas, SmolVLA prefix handling, LIBERO scene restoration, toy demonstrations and regression tests. The original author and copyright notice are retained.
 
-## Public repository review (2026-10-25)
+`tests/upstream/smolvla_sde.py` and `tests/upstream/training.py` are unchanged pinned snapshots used as regression references. They and the historical training archive retain their original comments and strings so the source evidence remains intact. Current project documentation is written in English.
 
-FlowSift repository maintenance and modifications are attributed to ChengruiHan; the inherited Teng Zhu / BlackMirean MIT notice is retained in LICENSE. LeRobot and downloaded model assets retain their own upstream terms.
+## FlowSift work
 
-The public repository organization draws on the explicit installation/usage documentation in [LeRobot](https://github.com/huggingface/lerobot) and the readable, reproducible experiment presentation in [CleanRL](https://github.com/vwxyzjn/cleanrl). These are organizational references, not additional copied algorithm implementations.
+| Component | Modification |
+|---|---|
+| `smolvla_sde.py` | Select original transition indices before denoiser forward passes; preserve full rollout. |
+| `training.py` | Use identical indices for current/reference/old; independent keyed selection, numerical guards, timing and gradient-scope records. |
+| `libero_rollout.py` | Explicitly freeze state projection, assign stable chunk IDs, align sampling mode, count partial-failure resources and handle early episode endings. |
+| `reference.py` | Share the frozen VLM during deepcopy to avoid a transient full-VLM copy. |
+| Experiment tooling | Attempted-group budgets, atomic checkpoints, protocol validation, GPU entry points, profiling, diagnostics and provenance-checked reporting. |
+| Validation and evidence | Upstream regression tests, subset loss/gradient checks, fixed-cache benchmarks, three-method online comparison and public measurement records. |
 
-Post-experiment corrections cover early episode termination, finite initial observations, evaluation provenance, fixed protocol fields and resumed timing. See [the review](docs/code_review.md). The [published evidence](docs/experiments/seed101/README.md) includes the exact historical training source with its original license; it is separate from the reviewed implementation on main.
+SDE conversion, GRPO, uniform timestep subsampling, SmolVLA and LIBERO are not claimed as original inventions of this project. FlowSift's contribution is the implementation, controlled validation and empirical cost–performance study.
+
+## Model source
+
+All methods use `MorpheusTzz/smolvla-grpo-libero-object`, revision `a120aa9b51f8e55db5ad8284e051963c61a2f5ed`, subdirectory `sft-100pct-baseline`. Weights are not included in the source distribution. LeRobot and downloaded model assets retain their own upstream terms.
+
+[Upstream environment records](docs/upstream-environment.md) and [setup notes](docs/upstream-setup.md) are installation references. Their hardware, historical findings and performance numbers are **not FlowSift measurements**.
+
+## Review and repository presentation
+
+FlowSift maintenance and modifications are attributed to ChengruiHan; the inherited Teng Zhu / BlackMirean MIT notice remains in [LICENSE](LICENSE).
+
+Post-experiment corrections cover early termination, finite initial observations, evaluation provenance, fixed protocol fields and resumed timing. See the [review](docs/code_review.md). The [public evidence](docs/experiments/seed101/README.md) includes the exact historical training source with its original license, separate from the reviewed main branch.
+
+The presentation draws on [CleanRL](https://github.com/vwxyzjn/cleanrl) for readable experimental implementations and reproducibility, [LeRobot](https://github.com/huggingface/lerobot) for accessible setup and documentation, and FlowVLA-RL for explicit attribution and evidence boundaries. These are organizational references, not additional copied algorithm implementations.

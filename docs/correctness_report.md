@@ -1,14 +1,12 @@
-# 正确性验证记录
+# Correctness evidence
 
-2026-10-25 审查：当前代码通过 112 项 CPU 测试，新增边界修复及证据范围见 [代码审查](code_review.md)。历史实验的公开证据见 [seed101](experiments/seed101/README.md)。
+The reviewed implementation passed **112 CPU tests** on 2026-10-25. The [review](code_review.md) documents the added boundary fixes and [Linux CI](https://github.com/ChengruiHan/FlowSift/actions/runs/40154856010) passed. The completed GPU experiment has separate [historical evidence](experiments/seed101/README.md); its gate must not be reused as approval for modified source.
 
-2026-10-23 更新：真实服务器实验已完成，GPU 缓存回归门槛为 passed，实际 profile 和 ODE 重放证据已保存在 results/server-experiment/single_seed/。最终结果见 docs/results_and_limitations.md。下表保留最初 CPU 验证时的证据范围，其“服务器待验证”列不代表最新进度。
+## Original CPU validation
 
-验证日期：2026-10-22。平台：macOS ARM64 / Python 3.12.14 / PyTorch 2.14.1 CPU。
+On 2026-10-22, the initial implementation passed **95 tests**, including inherited upstream regressions, on macOS ARM64 / Python 3.12.14 / PyTorch 2.14.1 CPU. Additional commands exercised integration, cache verification, profiling and syntax:
 
-本地完成 **95 项测试**（包括保留的上游回归），以及以下独立命令：
-
-```text
+```bash
 python -m pytest -q
 python scripts/smoke_cpu.py --output results/cpu-smoke
 python scripts/verify_cache.py --toy --output results/cpu-correctness.json
@@ -18,25 +16,30 @@ python -m compileall -q src scripts
 bash -n scripts/setup_server.sh
 ```
 
-CPU 三方法集成各完成3个 attempted groups、2次更新、末组 collapsed，全部生成 final。CPU profile 完成3缓存×3方法×3重复共27次更新，计数确认为 Full 每chunk 10/10、Late/Uniform 5/5。它不代表真实 SmolVLA 的速度或显存结果。
+Each CPU integration run completed three attempted groups, two updates and a collapsed final group, and saved a final checkpoint. CPU profiling ran 3 caches × 3 methods × 3 repetitions (27 measurements). Measured current/reference calls were 10/10 for Full and 5/5 for Late/Uniform. Toy timings are not real-model speed or memory results.
 
-| 门槛 | CPU 证据 | 服务器待验证 |
+## Gate coverage
+
+| Gate | CPU evidence | Real-runtime scope and limitations |
 |---|---|---|
-| C1 | 未修改上游 Full 与 None/全索引 logp、梯度、loss、参数更新对齐；冻结 state_proj 不改变实际更新 | 真实 BF16 原基线/修复基线重复性和统一容差 |
-| C2 | 任意顺序子集等于完整切片，使用原始时间和执行 mask | 真实缓存子集检查 |
-| C3 | 对 denoise_step 实际计数：10/10 或5/5 | GPU profile 调用计数 |
-| C4 | 非空、唯一、边界检查；常数目标不因步数减少而缩小 | 复用同一实现 |
-| C5 | 枚举全部252子集，含非零 k3 和非单位 ratio，平均 loss/逐参数梯度对齐 | 3个代表chunk、每个8个 Uniform 稀疏梯度探针；不做大模型252次枚举 |
-| C6 | 固定密度 mask、完整轨迹 detach、reference 无梯度 | 真实预处理/执行 mask 边界 |
-| C7 | 十步 old/current 一致；故意破坏后续chunk也会中止且不更新参数 | 所有转移 abs(delta)<=0.01、无 NaN/Inf |
-| C8 | 实际梯度集等于声明集；初始 clipped/unclipped PG 梯度一致 | 真实 SmolVLA 参数名/梯度范围 |
-| C9 | 选步/诊断不推进 Python、NumPy、torch RNG，同键复现 | CUDA RNG 和模拟器重建条件 |
-| C10 | 全collapsed、末组collapsed、mixed、部分组、已达预算恢复的结束与final | 真实环境异常路径与资源记录 |
-| C11 | 两次更新与中间保存/恢复的参数逐位一致；RNG恢复，reference hash不变，拒绝元数据不匹配 | GPU optimizer恢复、环境重建后的继续采样 |
+| C1 | Unmodified upstream Full, omitted indices and all-index paths agree on log-probabilities, loss, gradients and updates; explicit state-projection freezing does not change actual updates. | The archived GPU gate compares Full rescoring and one update against the upstream snapshot. |
+| C2 | Arbitrarily ordered subsets equal corresponding full slices, retaining original times and masks. | Included in archived GPU cache verification. |
+| C3 | Instrumented denoiser calls are 10/10 or 5/5 per chunk. | Recorded GPU profile also measures call counts. |
+| C4 | Nonempty, unique, in-range selections; constant objectives do not shrink when fewer steps are selected. | Same selection/normalization implementation is used on GPU. |
+| C5 | Enumerating all 252 subsets preserves mean loss and per-parameter gradients, including nonzero k3 and nonunit ratios. | Real-model probes use three chunks and eight Uniform samples per chunk, not exhaustive enumeration or a numerical proof of unbiasedness. |
+| C6 | Density aggregation respects masks; cached paths and reference parameters have no gradients. | CPU fixtures do not exercise every real preprocessing boundary. |
+| C7 | Ten-step old/current agreement; corrupting a later chunk aborts without an optimizer step. | Online selected-transition checks require absolute log-probability error ≤0.01 and finite values. |
+| C8 | Actual gradient names match the declared set; initial clipped/unclipped PG gradients agree. | Archived GPU gate records actual gradient parameter names. |
+| C9 | Selection and diagnostics preserve Python, NumPy and torch RNG; stable keys reproduce indices. | Exact simulator reconstruction after interruption is not established. |
+| C10 | All-collapsed, final-collapsed, mixed, partial-group and already-at-budget cases terminate/save correctly. | Live GPU failure injection was not performed. |
+| C11 | Two continuous updates equal an interrupted CPU save/restore sequence; RNG and reference hash are preserved; metadata mismatches are rejected. | GPU optimizer restoration and subsequent simulator sampling were not exercised by a real interruption. |
 
-此外覆盖协议参数拒绝、预算公式、三配置合法性、profile 按缓存配对且隔离 backend、评估重复/缺失 episode 检查。
+Other tests cover protocol rejection, budget calculation, method configurations, backend-separated cache comparisons, duplicate/missing evaluation episodes, and the review's new provenance and early-stop cases.
 
-CPU 浮点比较采用 atol=1e-6、rtol=1e-5；checkpoint 连续更新比较采用 atol=rtol=0。
-`verify_cache.py` 输出 logp 和参数更新的最大绝对误差、相对L2误差到 JSON。GPU 模式使用相同入口，但必须由服务器实际执行后才能记为通过。
+CPU floating comparisons use `atol=1e-6, rtol=1e-5`; checkpoint continuation comparisons use zero tolerance. `verify_cache.py` records maximum absolute and relative L2 errors for log-probabilities and updates. Real BF16 tolerances must be justified consistently from baseline behavior, not relaxed per method.
 
-不得把本报告表述为“真实模型 C1–C11 全部验收通过”。服务器 CUDA、模型文件 hash、LIBERO/EGL、ODE 重放和在线训练已在本次单种子实验执行；GPU 中断恢复等未发生的异常路径仍没有本次在线实测证据。
+## Historical GPU evidence
+
+The recorded GPU cache gate passed. SFT replay checks agreed on ten sampled conditions. CUDA, model-file hashes, LIBERO/EGL, online training and final ODE evaluation were exercised in the completed single-seed workflow.
+
+This does **not** mean every C1–C11 property or every recovery failure path was exhaustively validated on the real model. Consult the raw [GPU gate](experiments/seed101/gpu_correctness.json) and [review limitations](code_review.md) for the distinction.

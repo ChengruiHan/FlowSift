@@ -1,12 +1,12 @@
-# 运行产物
+# Generated experiment artifacts
 
-该目录存放生成的实验数据，默认不提交大文件。
+This directory stores generated run data. Large artifacts are excluded from Git by default; curated historical evidence is published under [docs/experiments/seed101](../docs/experiments/seed101/README.md).
 
-- `cpu-smoke/`、`cpu-profile/`、`cpu-correctness.json`：本地 toy CPU 验证，不是实际 SmolVLA 结果。
-- `server_environment.json`、`server-requirements.lock.txt`：服务器实际环境。
-- `profile_caches/`：Stage-A 原始缓存与更新前快照。
-- `runs/`：三方法 pilot/正式 run、manifest、groups、failures、sessions、checkpoints。
-- `evaluations/`：每个 checkpoint 的逐 episode ODE 评估。
-- `report/`：逐seed结果、逐任务结果、同缓存成本和图。
+- `cpu-smoke/`, `cpu-profile/`, `cpu-correctness.json`: toy CPU validation, not real SmolVLA results.
+- `server_environment.json`, `server-requirements.lock.txt`: the actual server environment.
+- `profile_caches/`: Stage-A trajectories and pre-update snapshots.
+- `runs/`: pilot/formal manifests, groups, failures, sessions and checkpoints.
+- `evaluations/`: per-episode ODE evaluations for each checkpoint.
+- `report/`: per-seed/per-task results, paired cache costs and figures.
 
-正式结果应保留原始日志、失败记录和所有种子，缺测值保持缺测，不填造示例数据。
+Keep original logs, failures and every planned seed. Missing measurements remain missing; never fill them with invented example data or encode a failed run as zero success.

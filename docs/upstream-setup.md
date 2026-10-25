@@ -1,6 +1,6 @@
 # Environment setup, with the pitfalls
 
-English | [简体中文](https://github.com/BlackMirean/FlowVLA-RL/tree/50e73afc07212f48bed370ea4c88a3131d6f914a)
+> Historical FlowVLA-RL setup notes, retained as an upstream reference. Hardware and findings here are not FlowSift measurements. Use the [FlowSift training guide](server_training.md) for this project.
 
 > First set up on: WSL2 Ubuntu / RTX 5060 Ti 16GB (sm_120 Blackwell) / 20 vCPU / 32GB host RAM.
 > Purpose of this file: replay the setup on a rented machine without re-debugging.

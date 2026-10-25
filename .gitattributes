@@ -1,0 +1,4 @@
+# Preserve historical evidence bytes so SHA256 checks survive clone settings.
+docs/experiments/seed101/** -text
+*.py text eol=lf
+*.sh text eol=lf
